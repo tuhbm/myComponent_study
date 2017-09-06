@@ -3,17 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <title>My Component</title>
+    <link rel="stylesheet" href="./dist/css/common.min.css">
 </head>
 <body>
 <div id="wrap">
     <h1>Taekyun's Component</h1>
-    <div class="component">
-        <h2>텝1</h2>
-    </div>
-    <div class="component">
-        <h2>텝2</h2>
+    <div class="content">
+        <ul class="list-component">
+            <li>
+                <div class="sort-component"><!-- 컴포넌트 종류 -->
+                    <h2>텝메뉴</h2>
+                    <ol>
+                        <li>
+                            <div class="component">
+                                <h3>1.텝 메뉴&컨텐츠 분리형</h3>
+                                <div class="tabComponent1">
+                                    <ul class="list-tab">
+                                        <li class="item tab-menu1 active">
+                                            <div class="inner-item">
+                                                <a href="#tab1-cont1" class="btn-tab"><span>메뉴1</span></a>
+                                                <ul id="tab1-cont1" class="list-content">
+                                                    <li><a href="">메뉴1내용1</a></li>
+                                                    <li><a href="">내용2</a></li>
+                                                    <li><a href="">내용3</a></li>
+                                                    <li><a href="">내용4</a></li>
+                                                    <li><a href="">내용5</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="item tab-menu2">
+                                            <div class="inner-item">
+                                                <a href="#tab1-cont2" class="btn-tab"><span>메뉴2</span></a>
+                                                <ul id="tab1-cont2" class="list-content">
+                                                    <li><a href="">메뉴2내용1</a></li>
+                                                    <li><a href="">내용2</a></li>
+                                                    <li><a href="">내용3</a></li>
+                                                    <li><a href="">내용4</a></li>
+                                                    <li><a href="">내용5</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="item tab-menu3">
+                                            <div class="inner-item">
+                                                <a href="#tab1-cont3" class="btn-tab"><span>메뉴3</span></a>
+                                                <ul id="tab1-cont3" class="list-content">
+                                                    <li><a href="">메뉴3내용1</a></li>
+                                                    <li><a href="">내용2</a></li>
+                                                    <li><a href="">내용3</a></li>
+                                                    <li><a href="">내용4</a></li>
+                                                    <li><a href="">내용5</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="component">
+                                <h3>2. 텝 메뉴&컨텐츠 혼합형</h3>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+
+            </li>
+            <li>
+
+            </li>
+        </ul>
     </div>
     <script src="dist/js/modules/jquery-1.8.3.min.js"></script>
+    <script src="dist/js/bundle.min.js"></script>
 </div>
 </body>
 </html>

@@ -14,11 +14,13 @@
     "gulp-concat-css": "^2.3.0",
     "gulp-csslint": "^1.0.0",
     "gulp-if": "^2.0.2",
+    "gulp-jshint": "^2.0.4",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.0.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^2.0.0",
-    "gulp-uglifycss": "^1.0.6"
+    "gulp-uglifycss": "^1.0.6",
+    "jshint": "^2.9.5"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
