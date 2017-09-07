@@ -69,6 +69,12 @@ address, caption, cite, code, dfn, em, var {
 
 
 /* 기본 start */
+
+@mixin float-clear{
+  display:block;
+  content:'';
+  clear:both;
+}
 body{
   position:relative;
 }
@@ -104,9 +110,7 @@ body{
     width: 100%;
     background-color: #1a0500;
     &:after {
-      display: block;
-      content: '';
-      clear: both;
+      @include float-clear
     }
   }
   .aside {
@@ -324,17 +328,15 @@ body{
 }
 
 /* 텝 컴포넌트1 end */
-/* 텝 컴포넌트2 start */
-.tabComponent2 {
+/* 텝 컴포넌트2,텝 컴포넌트3 start */
+.tabComponent2, .tabComponent3 {
   width:1000px;
   margin:0 auto;
   .tab-head{
     border: 1px solid #000;
     ul{
       &:after{
-        display:block;
-        content:'';
-        clear:both;
+        @include float-clear
       }
     }
     li{
@@ -350,4 +352,4 @@ body{
     }
   }
 }
-/* 텝 컴포넌트2 end */
+/* 텝 컴포넌트2,텝 컴포넌트3 end */

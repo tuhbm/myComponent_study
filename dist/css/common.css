@@ -381,34 +381,40 @@ body {
 
 /* 텝 컴포넌트1 end */
 
-/* 텝 컴포넌트2 start */
+/* 텝 컴포넌트2,텝 컴포넌트3 start */
 
-.tabComponent2 {
+.tabComponent2,
+.tabComponent3 {
   width: 1000px;
   margin: 0 auto;
 }
 
-.tabComponent2 .tab-head {
+.tabComponent2 .tab-head,
+.tabComponent3 .tab-head {
   border: 1px solid #000;
 }
 
-.tabComponent2 .tab-head ul:after {
+.tabComponent2 .tab-head ul:after,
+.tabComponent3 .tab-head ul:after {
   display: block;
   content: '';
   clear: both;
 }
 
-.tabComponent2 .tab-head li {
+.tabComponent2 .tab-head li,
+.tabComponent3 .tab-head li {
   float: left;
   width: 33.33%;
 }
 
-.tabComponent2 .tab-head li:last-child {
+.tabComponent2 .tab-head li:last-child,
+.tabComponent3 .tab-head li:last-child {
   width: 33.34%;
 }
 
-.tabComponent2 .tab-head li:last-child .btn-tab {
+.tabComponent2 .tab-head li:last-child .btn-tab,
+.tabComponent3 .tab-head li:last-child .btn-tab {
   border-right: 0;
 }
 
-/* 텝 컴포넌트2 end */
+/* 텝 컴포넌트2,텝 컴포넌트3 end */
