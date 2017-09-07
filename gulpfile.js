@@ -3,6 +3,7 @@ var sourcemaps  = require('gulp-sourcemaps');
 var autoprefixer= require('gulp-autoprefixer');
 var sass        = require('gulp-sass');
 var jshint      = require('gulp-jshint');
+var stylish     = require('jshint-stylish');
 var csslint     = require('gulp-csslint');
 var concatcss   = require('gulp-concat-css');
 var uglifycss   = require('gulp-uglifycss');
@@ -39,8 +40,8 @@ var path ={
 gulp.task('default',['watch','sass','styles','scripts']);
 
 gulp.task('watch',function(){
-    gulp.watch(path.sass.src, ['sass']),
-    gulp.watch(path.css.src, ['styles']),
+    gulp.watch(path.sass.src, ['sass']);
+    gulp.watch(path.css.src, ['styles']);
     gulp.watch(path.js.src, ['scripts']);
 });
 
@@ -82,7 +83,8 @@ gulp.task('scripts',['js:hint','js:concat','js:uglify']);
 gulp.task('js:hint', function() {
   return gulp.src('./lib/*.js')
     .pipe(jshint())
-    .pipe(jshint.reporter('default'))
+    .pipe(jshint.reporter(stylish))
+    .pipe(jshint.reporter('fail'))
 });
 gulp.task('js:concat',function(){
     gulp.src(path.js.src)
