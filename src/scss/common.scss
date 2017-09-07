@@ -1,0 +1,150 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
+fieldset,img {border:0 none}
+dl,ul,ol,menu,li {list-style:none}
+blockquote, q {quotes: none}
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
+input,select,textarea,button {vertical-align:middle}
+button {border:0 none;background-color:transparent;cursor:pointer;}
+body {background:#fff}
+body,th,td,input,select,textarea,button {font-size:12px;line-height:1.5;font-family:'돋움',dotum,sans-serif;color:#333} /* color값은 디자인가이드에 맞게사용 */
+a {color:#333;text-decoration:none}
+a:active, a:hover {text-decoration:underline}
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+/* 기본 start */
+#wrap{
+  h1{
+    background-color:#ff4d4d;
+    color:#fff;
+    line-height:100px;
+    font-size:50px;
+    text-align:center;
+  }
+  .content{
+    width:100%;
+    background-color:#1a0500;
+
+    .list-component{
+      margin:0 auto;
+      max-width:1200px;
+    }
+    .sort-component{
+      background-color:#fff;
+      padding:30px;
+
+      ol > li{
+        margin-top:30px;
+
+        &:first-child{
+          margin-top:0;
+        }
+      }
+    }
+    h2{
+      margin-bottom:30px;
+      padding-left:5px;
+      font-size:30px;
+      border-bottom:1px solid #ddd;
+      line-height:40px;
+    }
+  }
+  .component {
+    width: 100%;
+
+    h3 {
+      margin-bottom:20px;
+      padding-left:20px;
+      font-size: 20px;
+      text-align: left;
+      color:#fff;
+      line-height:30px;
+      background-color:#1a0500;
+    }
+    & > div{
+      min-width: 320px;
+
+    }
+  }
+}
+/* 기본 end */
+/* 텝 컴포넌트1 start */
+.tabComponent1 {
+  height:300px;
+  padding-top: 60px;
+
+  .list-tab{
+    position:relative;
+    width:1000px;
+    margin:0 auto;
+    .item{
+      position:absolute;
+
+      .inner-item{
+        position:relative;
+        height: 360px;
+        width: 1000px;
+      }
+    }
+    .btn-tab{
+      position:absolute;
+      top:-60px;
+      width:33.33%;
+      height:60px;
+      background-color:#fff;
+      color:#000;
+      border-top:1px solid #000;
+      border-bottom:1px solid #000;
+      border-right:1px solid #000;
+      text-align:center;
+      z-index:10000;
+
+      > span{
+        font-size:30px;
+        line-height:60px;
+      }
+    }
+    .list-content{
+      display:none;
+      width:1000px;
+      height:300px;
+      border:1px solid #000;
+      border-top:0;
+      box-sizing:border-box;
+      padding:30px 10px;
+      li{
+        font-size:20px;
+        line-height:30px;
+        &:before{
+          content:'-';
+          float:left;
+          font-size:20px;
+          margin-right:10px;
+        }
+      }
+    }
+    & >li{
+      &:nth-child(1) .btn-tab{
+        border-left:1px solid #000;
+        left:0;
+      }
+      &:nth-child(2) .btn-tab{
+        left:33.33%;
+      }
+      &:nth-child(3) .btn-tab{
+        right:0;
+        width:33.34%;
+      }
+      &.active{
+        .list-content{
+          display:block;
+        }
+        .btn-tab{
+          background-color:#000;
+          color:#fff;
+        }
+      }
+    }
+
+
+  }
+}
+/* 텝 컴포넌트1 end */

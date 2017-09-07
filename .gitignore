@@ -1,5 +1,9 @@
-.idea
-node_modules
-*.iml
 .DS_Store
-src
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+.idea
+*.iml
