@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>My Component</title>
     <link rel="stylesheet" href="./dist/css/common.min.css">
+    <link rel="stylesheet" href="./dist/css/modules/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <div id="componentIndex">
@@ -17,9 +18,13 @@
             <h2 class="screen_out">컴포넌트 메뉴</h2>
             <ul class="list-menu">
                 <li>
-                    <a href="">텝</a>
+                    <a href="#tab">텝</a>
                     <p class="sub-menu">1.텝 메뉴&컨텐츠 분리형</p>
-                    <p class="sub-menu">2.텝 메뉴&컨텐츠 혼합형</p>
+                    <p class="sub-menu">2.텝 메뉴&컨텐츠 혼합형(data attribute 사용)</p>
+                    <p class="sub-menu">3.텝 메뉴&컨텐츠 혼합형</p>
+                </li>
+                <li>
+                    <a href="#star">별점</a>
                 </li>
             </ul>
         </div>
@@ -27,7 +32,7 @@
             <h2 class="screen_out">컴포넌트 본문</h2>
             <ul class="list-component">
                 <li>
-                    <div class="sort-component tab-component"><!-- 컴포넌트 종류 -->
+                    <div id="tab" class="sort-component tab-component"><!-- 컴포넌트 종류 -->
                         <h3>텝메뉴</h3>
                         <ol>
                             <li>
@@ -173,11 +178,63 @@
                             </li>
                         </ol>
                     </div>
-
-
+                </li>
+                <!--<li>-->
+                    <!--<div class="sort-component card-component">-->
+                        <!--<h3>카드</h3>-->
+                        <!--<ol>-->
+                            <!--<li>-->
+                                <!--<div class="component">-->
+                                    <!--<div class="card">-->
+                                        <!--<div class="inner-card">-->
+                                            <!--div-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</li>-->
+                        <!--</ol>-->
+                    <!--</div>-->
+                <!--</li>-->
+                <li>
+                    <div id="star" class="sort-component star-component">
+                        <h3>별점</h3>
+                        <div class="component">
+                            <div class="starComponent">
+                                <form action="">
+                                    <fieldset>
+                                        <span class="star-cb-group">
+                                            <input id="star5" type="radio"><label class="lab_star fa fa-star-o" for="star5"></label>
+                                            <input id="star4" type="radio"><label class="lab_star fa fa-star-o" for="star4"></label>
+                                            <input id="star3" type="radio"><label class="lab_star fa fa-star-o" for="star3"></label>
+                                            <input id="star2" type="radio"><label class="lab_star fa fa-star-o" for="star2"></label>
+                                            <input id="star1" type="radio"><label class="lab_star fa fa-star-o" for="star1"></label>
+                                        </span>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li>
-
+                    <div class="sort-component search-component">
+                        <h3>검색바</h3>
+                        <div class="component">
+                            <h4>검색바 기본</h4>
+                            <div class="searchComponent1">
+                                <div class="area-search">
+                                    <form action="">
+                                        <fieldset>
+                                            <div class="inner-search">
+                                                <label for="search1" class="lab-search">검색어를 입력해주세요</label>
+                                                <input id="search1" type="text" placeholder="검색어를 입력해주세요">
+                                                <button type="button" class="btn-search"><span class="fa fa-search">검색</span></button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>

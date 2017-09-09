@@ -354,3 +354,112 @@ body{
   }
 }
 /* 텝 컴포넌트2,텝 컴포넌트3 end */
+
+/* 별점 start */
+$unchecked-star: '\f005';
+$unchecked-color: #888;
+$checked-star: '\f006';
+$checked-color: #e52;
+
+.starComponent{
+  input {
+    display: none;
+    & + label {
+      /* only enough room for the star */
+      display: inline-block;
+      overflow: hidden;
+      text-indent: 9999px;
+      width: 1em;
+      white-space: nowrap;
+      cursor: pointer;
+      &:before {
+        display: inline-block;
+        text-indent: -9999px;
+        content: $unchecked-star;
+        color: transparent;
+        text-shadow: 0 0 1px #333;
+      }
+    }
+    &:checked ~ label:before,
+    & + label:hover ~ label:before,
+    & + label:hover:before {
+      content: $checked-star;
+      color: $checked-color;
+      text-shadow: 0 0 1px $checked-color;
+    }
+  }
+
+  /* the hidden clearer */
+  & > .star-cb-clear + label {
+    text-indent: -9999px;
+    width: .5em;
+    margin-left: -.5em;
+  }
+  & > .star-cb-clear + label:before {
+    width: .5em;
+  }
+
+  &:hover > input + label:before {
+    content: $unchecked-star;
+    color: $unchecked-color;
+    text-shadow: none;
+  }
+  &:hover > input + label:hover ~ label:before,
+  &:hover > input + label:hover:before {
+    content: $checked-star;
+    color: $checked-color;
+    text-shadow: 0 0 1px #333;
+  }
+}
+/* 별점 emd */
+.searchComponent1{
+  .area-search{
+    text-align:center;
+  }
+  .inner-search{
+    display:inline-block;
+    width:80%;
+    &:after{
+      @include float-clear;
+    }
+  }
+  .lab-search{
+    font-size:0;
+    text-indent: -9999px;
+    line-height:0;
+  }
+  input{
+    float:left;
+    width:90%;
+    height:50px;
+    padding:10px 20px;
+    font-size:15px;
+    color:#000;
+    box-sizing: border-box;
+    border:1px solid #333;
+    &::placeholder{
+      color:#000;
+    }
+  }
+  .btn-search{
+    float:left;
+    width:10%;
+    height:50px;
+    border:1px solid #333;
+    border-left:0;
+    text-align:center;
+    box-sizing: border-box;
+
+    span{
+      display:block;
+      font-size:0;
+      line-height:0;
+
+      &:before{
+        font-size:25px;
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+  }
+}
