@@ -34,9 +34,72 @@ $(function(){
 
   }
 
+  function searchList(){
+    var $obj = $('.inner-search');
+    var $objInput = $obj.find('input');
+    // var $objBtn = $obj.find('button');
+    // var $this = $(this);
+    //
+    // var $inner = $this.parent('.inner-search');
+    // var $txt = $inner.find('input').val();
+    // $objBtn.on('click',function(){
+    //   var $inner = $(this).parent('.inner-search');
+    //   var $txt = $inner.find('input').val();
+    //   console.log($inner);
+    //   console.log($txt);
+    //   $inner.addClass('active');
+    // });
+    // $objInput.on('click', function(){
+    //   var $inner = $(this).parent('.inner-search');
+    //   var $txt = $inner.find('input').val();
+    //   console.log($inner);
+    //   console.log($txt);
+    //   $inner.addClass('active');
+    // });
+    // $('body').on('click', function(){
+    //   console.log(1);
+    //   var $inner = $(this).parent('.inner-search');
+    //   if($obj.hasClass('active')){
+    //     $obj.removeClass('active');
+    //   }else{
+    //     return false;
+    //   }
+    //
+    // });
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $objInput.autocomplete({
+      source: availableTags
+    });
+
+  }
+
 
 
   firstTab();
   secondTab();
   thirdTab();
+  searchList();
 });

@@ -237,11 +237,11 @@ body{
   .tab-content{
     display: none;
     width: 1000px;
-    height: 300px;
+    //height: 300px;
     border: 1px solid #000;
     border-top: 0;
     box-sizing: border-box;
-    padding: 30px 10px;
+    padding: 10px 10px;
 
     &.active {
         display: block;
@@ -263,7 +263,7 @@ body{
 }
 /* 텝 컴포넌트1 start */
 .tabComponent1 {
-  height: 300px;
+  min-height: 200px;
   padding-top: 60px;
 
   .list-tab {
@@ -418,9 +418,15 @@ $checked-color: #e52;
   }
   .inner-search{
     display:inline-block;
+    position:relative;
     width:80%;
     &:after{
       @include float-clear;
+    }
+    &.active{
+      .box-searchList{
+        display:block;
+      }
     }
   }
   .lab-search{
@@ -459,6 +465,45 @@ $checked-color: #e52;
         font-size:25px;
         vertical-align: middle;
         text-align: center;
+      }
+    }
+  }
+  .box-searchList{
+    display:none;
+    position:absolute;
+    top:50px;
+    left:0;
+    width:100%;
+    text-align:left;
+    border:1px solid #000;
+    border-top:0;
+    box-sizing:border-box;
+    z-index:100;
+    li{
+      a{
+        display:block;
+        font-size:20px;
+        line-height:30px;
+        padding-left:20px;
+        background-color:#fff;
+        &:after{
+          @include float-clear;
+        }
+
+        &:hover{
+          color:#fff;
+          background-color:#000;
+          .btn-close{
+            color:#fff;
+          }
+        }
+        .btn-close{
+          float:right;
+          width:30px;
+          height:30px;
+          font-size:25px;
+          line-height:30px;
+        }
       }
     }
   }
