@@ -96,10 +96,19 @@ $(function(){
 
   }
 
+  function accordionUi(){
+    $('.accordion').accordion();
+  };
+  function datepickerUi(){
+    $('.datepicker').datepicker();
+  }
+
 
 
   firstTab();
   secondTab();
   thirdTab();
   searchList();
+  accordionUi();
+  datepickerUi();
 });

@@ -442,7 +442,7 @@ body {
 .starComponent input + label:before {
   display: inline-block;
   text-indent: -9999px;
-  content: "";
+  content: "";
   color: transparent;
   text-shadow: 0 0 1px #333;
 }
@@ -450,7 +450,7 @@ body {
 .starComponent input:checked ~ label:before,
 .starComponent input + label:hover ~ label:before,
 .starComponent input + label:hover:before {
-  content: "";
+  content: "";
   color: #e52;
   text-shadow: 0 0 1px #e52;
 }
@@ -466,14 +466,14 @@ body {
 }
 
 .starComponent:hover > input + label:before {
-  content: "";
+  content: "";
   color: #888;
   text-shadow: none;
 }
 
 .starComponent:hover > input + label:hover ~ label:before,
 .starComponent:hover > input + label:hover:before {
-  content: "";
+  content: "";
   color: #e52;
   text-shadow: 0 0 1px #333;
 }
